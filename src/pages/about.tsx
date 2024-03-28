@@ -22,9 +22,14 @@ export default function About() {
             <div>
                 <link rel="stylesheet" href="" title="FaceBook" />
                 <link rel="stylesheet" href="" title="Instagram" />
-                <Button text={"Contactez"} onClick={function (): void {
-                    throw new Error("Function not implemented.");
-                }}></Button>
+                <Link
+
+                    href='/contact'
+
+                    title='Lien qui redirige vers la page de contact'
+                >
+                    contact
+                </Link>
 
             </div>
         </Main >

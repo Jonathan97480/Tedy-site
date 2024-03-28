@@ -8,13 +8,8 @@ import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import mockup_pc from '../images/cover/MockupPc.jpeg'
-import bg_services from '../images/cover/bg_services.jpg'
-import bg_responsive from '../images/cover/bg_responsive.webp'
-import bg_wireframe from '../images/cover/wireframe.webp'
-import bg_maquette from '../images/cover/maquette.webp'
-import bg_development from '../images/cover/development.webp'
-import bg_lancement from '../images/cover/start.webp'
-import bg_woman from '../images/cover/woman_projet.webp'
+import bg_services from '../images/cover/bg_services.jpeg'
+
 import Link from 'next/link'
 import { getProjects, Project } from './api/projects'
 import { setProject } from '@/redux/slice/projectSlice'
@@ -41,13 +36,23 @@ export default function Home() {
                 <div>
                     <small>Tydevelopper</small>
                     <h1>Un site internet à l'image de votre <span>entreprise.</span> </h1>
+                    <p>Explorez une approche personnalisée de la création de sites web, façonnée pour mettre en valeur l'authenticité de votre entreprise</p>
+                    <Link
+
+                        href='/contact'
+
+                        title='Lien qui redirige vers la page de contact'
+                    >
+                        contact
+                    </Link>
+                    <Link href={"#all_project"}>Projets</Link>
                 </div>
                 <div>
                     <Image src={mockup_pc} alt="mockup pc" width={500} height={500}></Image>
                 </div>
 
             </section>
-            <section>
+            <section id='"#all_project"'>
                 <h2>Derniers projets</h2>
                 <small>Exploration de notre univers</small>
                 <div>{/* TODO:Carousel */}</div>
@@ -97,9 +102,14 @@ export default function Home() {
 
                     <p> Vous avais une entreprise et pas de site internet ?
                         Vous penser que les réseaux sociaux sont assez pour votre entreprise ? Voici quelque detail afin de comprendre limportance d’un site internet</p>
-                    <Button text={'J’ai d’autres question ?'} onClick={function (): void {
-                        throw new Error('Function not implemented.')
-                    }}></Button>
+                    <Link
+
+                        href='/contact'
+
+                        title="Lien qui redirige vers la page de mentions l'egals"
+                    >
+                        J’ai d’autres question ?
+                    </Link>
                 </div>
                 <div>
                     <span><p>Améliore votre visibilité</p></span>
@@ -113,9 +123,14 @@ export default function Home() {
             <section>
                 <h2>Prêt à démarrer votre projet ? </h2>
                 <p>Contactez-nous et découvrez ce que nous pouvons réaliser ensemble</p>
-                <Button text={'Contacter'} onClick={function (): void {
-                    throw new Error('Function not implemented.')
-                }}></Button>
+                <Link
+
+                    href='/contact'
+
+                    title='Lien qui redirige vers la page de contact'
+                >
+                    contact
+                </Link>
 
             </section>
 

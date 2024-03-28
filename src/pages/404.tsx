@@ -22,12 +22,22 @@ export default function page404() {
                     <h1>OOPS</h1>
                     <h1>Désolé mais la page que vous rechercher n’existe pas ou n’existe plus</h1>
                     <div>
-                        <Button text={"Accueil"} onClick={function (): void {
-                            throw new Error("Function not implemented.");
-                        }}></Button>
-                        <Button text={"Contact"} onClick={function (): void {
-                            throw new Error("Function not implemented.");
-                        }}></Button>
+                        <Link
+
+                            href='/'
+
+                            title='Lien qui redirige vers la page Home'
+                        >
+                            contact
+                        </Link>
+                        <Link
+
+                            href='/contact'
+
+                            title='Lien qui redirige vers la page de contact'
+                        >
+                            contact
+                        </Link>
 
                     </div>
                 </div>
