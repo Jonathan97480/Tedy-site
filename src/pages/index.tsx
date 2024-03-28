@@ -7,9 +7,9 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import bg_remarque from '../images/cover/remarque.webp'
-import bg_services from '../images/cover/services.webp'
-import bg_projet from '../images/cover/projet.webp'
+import mockup_pc from '../images/cover/MockupPc.jpeg'
+import bg_services from '../images/cover/bg_services.jpg'
+import bg_responsive from '../images/cover/bg_responsive.webp'
 import bg_wireframe from '../images/cover/wireframe.webp'
 import bg_maquette from '../images/cover/maquette.webp'
 import bg_development from '../images/cover/development.webp'
@@ -27,13 +27,6 @@ export default function Home() {
     const [projects, setProjects] = useState<Project[]>([])
     const projectsRedux = useSelector((state: any) => state.Project.project)
 
-
-
-
-
-
-
-
     useEffect(() => { }, [])
 
 
@@ -44,7 +37,87 @@ export default function Home() {
             pageDescription={``}
 
         >
-            <h1>HOme</h1>
+            <section>
+                <div>
+                    <small>Tydevelopper</small>
+                    <h1>Un site internet à l'image de votre <span>entreprise.</span> </h1>
+                </div>
+                <div>
+                    <Image src={mockup_pc} alt="mockup pc" width={500} height={500}></Image>
+                </div>
+
+            </section>
+            <section>
+                <h2>Derniers projets</h2>
+                <small>Exploration de notre univers</small>
+                <div>{/* TODO:Carousel */}</div>
+            </section>
+            <section>
+                <h2>Nos principales services</h2>
+                <small>Création de sites internet</small>
+                <div>
+                    <div>
+                        <div>
+                            <h3>Site one page</h3>
+                            <p>Un site one page est une solution web concise et efficace, condensant toutes les informations essentielles sur une seule page, offrant une expérience fluide et intuitive à l'utilisateur.</p>
+                        </div>
+                        <div>
+                            <h3>Site E-commerce</h3>
+                            <p>Un site e-commerce est une plateforme en ligne où vous pouvez acheter une variété de produits et services, similaire à un magasin physique mais accessible via internet.</p>
+                        </div>
+                        <div>
+                            <h3>Site vitrine</h3>
+                            <p>Un site vitrine est comme une vitrine de magasin en ligne : ouvert 24h/24, 7j/7, il expose vos produits et services de manière attractive et accessible en tout temps.</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <Image src={bg_services} alt="services" width={500} height={500}></Image>
+                    </div>
+                </div>
+            </section>
+            <section>
+                {/* Todo carousel */}
+                <div>
+                    <div>
+                        <h2>Responsive design</h2>
+                        <p>Le responsive design est une approche de conception de sites web qui vise à offrir une expérience utilisateur fluide sur tous les appareils, des smartphones, tablettes et ordinateurs.</p>
+                    </div>
+                    <div>
+                        <Image src={bg_services} alt="services" width={500} height={500}></Image>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+
+                    <h2>Pourquoi avoir un site internet ? </h2>
+                    <small>Un site internet a de nombreuse avantages que les gens ignorent </small>
+
+                    <p> Vous avais une entreprise et pas de site internet ?
+                        Vous penser que les réseaux sociaux sont assez pour votre entreprise ? Voici quelque detail afin de comprendre limportance d’un site internet</p>
+                    <Button text={'J’ai d’autres question ?'} onClick={function (): void {
+                        throw new Error('Function not implemented.')
+                    }}></Button>
+                </div>
+                <div>
+                    <span><p>Améliore votre visibilité</p></span>
+                    <span><p>Rajoute une touche de crédibilité</p></span>
+                    <span><p>Source de rentabilité</p></span>
+                    <span><p>Propre à vos gouts</p></span>
+
+                </div>
+            </section>
+
+            <section>
+                <h2>Prêt à démarrer votre projet ? </h2>
+                <p>Contactez-nous et découvrez ce que nous pouvons réaliser ensemble</p>
+                <Button text={'Contacter'} onClick={function (): void {
+                    throw new Error('Function not implemented.')
+                }}></Button>
+
+            </section>
 
         </Main>
     )

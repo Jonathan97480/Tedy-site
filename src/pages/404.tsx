@@ -1,7 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Main } from "@/components";
+import { Button } from "@/components/ux";
 import Image from "next/image";
 import Link from "next/link";
+import bg_404 from '../images/cover/404.jpeg'
 
 
 export default function page404() {
@@ -12,7 +14,24 @@ export default function page404() {
             className="page404 "
 
         >
-            <div>404</div>
+            <section>
+                <div>
+                    <Image src={bg_404} alt="404" width={500} height={500}></Image>
+                </div>
+                <div>
+                    <h1>OOPS</h1>
+                    <h1>Désolé mais la page que vous rechercher n’existe pas ou n’existe plus</h1>
+                    <div>
+                        <Button text={"Accueil"} onClick={function (): void {
+                            throw new Error("Function not implemented.");
+                        }}></Button>
+                        <Button text={"Contact"} onClick={function (): void {
+                            throw new Error("Function not implemented.");
+                        }}></Button>
+
+                    </div>
+                </div>
+            </section>
         </Main>
     )
 }
