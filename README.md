@@ -1,6 +1,3 @@
-# Site Entreprise Jon-Dev
-
-Bienvenue sur le projet du site pour l'entreprise Jon-Dev! Ce projet a pour but de mettre en avant l'entreprise Jon-Dev et de fournir un endroit où les clients peuvent suivre en temps réel l'avancement de leurs projets.
 
 ## Technologie utilisée
 
